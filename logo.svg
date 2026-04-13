@@ -46,8 +46,8 @@
         />
         <link
             rel="icon"
-            type="image/svg+xml"
-            href="./branding/lucide-favicon.svg"
+            type="image/png"
+            href="./branding/lucide.png"
         />
         <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous" />
         <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
@@ -67,9 +67,9 @@
             src="https://cdn.21baseballacademy.com/script/jrqK2HPsliMjRW5Q.js"
             defer="defer"
         ></script>
-        <script src="./runtime/scramjet/scramjet.all.js?v=mnwmzbek"></script>
-        <script src="./runtime/baremux/index.js?v=mnwmzbek"></script>
-      <script crossorigin="anonymous">(function(){import("./assets/index-B6Um2Wl5.js");})();</script>
+        <script src="./runtime/scramjet/scramjet.all.js?v=mnxo1yc8"></script>
+        <script src="./runtime/baremux/index.js?v=mnxo1yc8"></script>
+      <script crossorigin="anonymous">(function(){import("./assets/index-ZDa-M5fh.js");})();</script>
       <link rel="stylesheet" crossorigin="anonymous" href="./assets/index-CnNxC5Be.css" />
     
       </head>

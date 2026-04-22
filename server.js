@@ -38,7 +38,7 @@ res.end(“Not found: “ + urlPath);
 return;
 }
 
-```
+
 var ext  = path.extname(filePath).toLowerCase();
 var mime = MIME[ext] || "application/octet-stream";
 
@@ -49,7 +49,7 @@ res.writeHead(200, {
   "Cross-Origin-Embedder-Policy": "require-corp"
 });
 res.end(data);
-```
+
 
 });
 });

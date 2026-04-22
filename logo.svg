@@ -3,6 +3,13 @@
     <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
       <head>
 
+```
+    <!--
+      DOM patching script - MUST be first.
+      Rewires document.head / body / documentElement to point at
+      the XHTML nodes inside this foreignObject so scripts behave
+      as if this were a normal HTML page, not an SVG document.
+    -->
     <script>(function(){var NS="http://www.w3.org/1999/xhtml";var root=document.querySelector("foreignObject").firstElementChild;var head=root.querySelector("head");var body=root.querySelector("body");var _ce=document.createElement.bind(document);var _cens=document.createElementNS.bind(document);Object.defineProperty(document,"head",{get:function(){return head},configurable:true});Object.defineProperty(document,"body",{get:function(){return body},configurable:true});Object.defineProperty(document,"documentElement",{get:function(){return root},configurable:true});document.createElement=function(t,o){return typeof t==="string"?_cens(NS,t,o):_ce(t,o)};document.createElementNS=function(ns,n,o){return!ns||ns===NS?_cens(NS,n,o):_cens(ns,n,o)};if(!location.hash)history.replaceState(history.state,"","#/");}());</script>
 
     <!-- SVG layout fixes -->
@@ -15,7 +22,12 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;700&amp;family=Space+Grotesk:wght@300;500;700&amp;display=swap" rel="stylesheet" />
 
-    
+    <!--
+      Relative paths resolve automatically from any host:
+        Render  ->  https://my-app.onrender.com/runtime/scramjet/...
+        jsDelivr -> https://cdn.jsdelivr.net/gh/user/repo@main/runtime/scramjet/...
+      No URL to update between deployments.
+    -->
     <script src="./runtime/scramjet/scramjet.all.js"></script>
     <script src="./runtime/baremux/index.js"></script>
 
@@ -616,6 +628,7 @@
 
   </body>
 </html>
+```
 
   </foreignObject>
 </svg>

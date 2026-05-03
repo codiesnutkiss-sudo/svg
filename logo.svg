@@ -3,7 +3,6 @@
     <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
       <head>
 
-```
     <!--
       DOM patching script - MUST be first.
       Rewires document.head / body / documentElement to point at
@@ -628,7 +627,6 @@
 
   </body>
 </html>
-```
 
   </foreignObject>
 </svg>
